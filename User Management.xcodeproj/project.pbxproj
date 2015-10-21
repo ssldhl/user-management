@@ -14,6 +14,7 @@
 		359A81CF1BD7DE9C00137970 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359A81CD1BD7DE9C00137970 /* LaunchScreen.storyboard */; };
 		359A81DA1BD7DE9C00137970 /* User_ManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A81D91BD7DE9C00137970 /* User_ManagementTests.swift */; };
 		359A81E51BD7DE9C00137970 /* User_ManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A81E41BD7DE9C00137970 /* User_ManagementUITests.swift */; };
+		359A81F91BD7E2E700137970 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 359A81F81BD7E2E700137970 /* keys.plist */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		359A81E01BD7DE9C00137970 /* User ManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "User ManagementUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		359A81E41BD7DE9C00137970 /* User_ManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_ManagementUITests.swift; sourceTree = "<group>"; };
 		359A81E61BD7DE9C00137970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		359A81F81BD7E2E700137970 /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				359A81CB1BD7DE9C00137970 /* Assets.xcassets */,
 				359A81CD1BD7DE9C00137970 /* LaunchScreen.storyboard */,
 				359A81D01BD7DE9C00137970 /* Info.plist */,
+				359A81F81BD7E2E700137970 /* keys.plist */,
 			);
 			path = "User Management";
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359A81F91BD7E2E700137970 /* keys.plist in Resources */,
 				359A81CF1BD7DE9C00137970 /* LaunchScreen.storyboard in Resources */,
 				359A81CC1BD7DE9C00137970 /* Assets.xcassets in Resources */,
 				359A81CA1BD7DE9C00137970 /* Main.storyboard in Resources */,
