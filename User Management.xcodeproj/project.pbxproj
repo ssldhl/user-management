@@ -29,6 +29,7 @@
 		359A82121BD8012600137970 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 359A82111BD8012600137970 /* libsqlite3.tbd */; };
 		359A82141BD8017100137970 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359A82131BD8017100137970 /* Accounts.framework */; };
 		359A82161BD8017F00137970 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359A82151BD8017F00137970 /* Social.framework */; };
+		359A82181BD8093000137970 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A82171BD8093000137970 /* SignUpViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		359A82111BD8012600137970 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		359A82131BD8017100137970 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		359A82151BD8017F00137970 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		359A82171BD8093000137970 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				359A81CD1BD7DE9C00137970 /* LaunchScreen.storyboard */,
 				359A81D01BD7DE9C00137970 /* Info.plist */,
 				359A81F81BD7E2E700137970 /* keys.plist */,
+				359A82171BD8093000137970 /* SignUpViewController.swift */,
 			);
 			path = "User Management";
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359A82181BD8093000137970 /* SignUpViewController.swift in Sources */,
 				359A81C71BD7DE9C00137970 /* ViewController.swift in Sources */,
 				359A81C51BD7DE9C00137970 /* AppDelegate.swift in Sources */,
 			);

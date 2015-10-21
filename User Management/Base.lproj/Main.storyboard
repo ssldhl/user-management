@@ -74,7 +74,7 @@
         <!--Sign Up-->
         <scene sceneID="GlM-7G-wLL">
             <objects>
-                <viewController id="WST-hp-PfQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="WST-hp-PfQ" customClass="SignUpViewController" customModule="User_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7cg-rd-ELv"/>
                         <viewControllerLayoutGuide type="bottom" id="JSe-1Y-2Nf"/>
@@ -83,9 +83,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sxe-Qx-tsg">
-                                <rect key="frame" x="20" y="76" width="76" height="62"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="kcZ-Pq-Nv3">
                                 <rect key="frame" x="20" y="155" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -120,7 +117,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dih-f9-vCk">
                                 <rect key="frame" x="125" y="92" width="144" height="30"/>
                                 <state key="normal" title="Select Profile Picture"/>
+                                <connections>
+                                    <action selector="selectProfilePicture:" destination="WST-hp-PfQ" eventType="touchUpInside" id="1cI-0y-ifV"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sxe-Qx-tsg">
+                                <rect key="frame" x="20" y="76" width="76" height="62"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -128,6 +131,9 @@
                         <barButtonItem key="rightBarButtonItem" title="Cancel" id="xZI-QC-OL7"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="profilePicture" destination="sxe-Qx-tsg" id="0mf-hq-TPZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z74-Da-PA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
