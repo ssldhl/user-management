@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Parse
 
-class MenuViewController: UIViewController, UITableViewDataSource {
+class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var menuItems: [String] = ["Main", "About", "Sign Out"]
     
@@ -34,6 +35,44 @@ class MenuViewController: UIViewController, UITableViewDataSource {
         return menuTableCell
     }
     
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        switch(indexPath.row){
+        case 0:
+            let home: HomeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
+            let homeNavigation = UINavigationController(rootViewController: home)
+            
+            appDelegate.drawerContainer?.centerViewController = homeNavigation
+            appDelegate.drawerContainer?.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+            
+            break
+        case 1:
+            let about: AboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("AboutViewController") as! AboutViewController
+            let aboutNavigation = UINavigationController(rootViewController: about)
+            
+            appDelegate.drawerContainer?.centerViewController = aboutNavigation
+            appDelegate.drawerContainer?.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+            
+            break
+        case 2:
+            NSUserDefaults.standardUserDefaults().removeObjectForKey("user_name")
+            NSUserDefaults.standardUserDefaults().synchronize()
+            
+            PFUser.logOutInBackgroundWithBlock({ (error:NSError?) -> Void in
+                if(error == nil){
+                    let signIn: SignInViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SignInViewController") as! SignInViewController
+                    let signInNavigation = UINavigationController(rootViewController: signIn)
+                    appDelegate.window?.rootViewController = signInNavigation
+                }else{
+                    print(error!.localizedDescription)
+                }
+            })
+            
+            break
+        default:
+            print("This case will not arrive")
+        }
+    }
 
 }
