@@ -13,11 +13,24 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     var menuItems: [String] = ["Main", "About", "Sign Out"]
     
+    @IBOutlet weak var profilePictureView: UIImageView!
+    @IBOutlet weak var nameField: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let firstName: String = PFUser.currentUser()?.objectForKey("first_name") as! String
+        let lastName: String = PFUser.currentUser()?.objectForKey("last_name") as! String
+        nameField.text = "\(firstName) \(lastName)"
+        
+        let profilePictureData: PFFile = PFUser.currentUser()?.objectForKey("profile_picture") as! PFFile
+        profilePictureData.getDataInBackgroundWithBlock { (profilePicture:NSData?, error:NSError?) -> Void in
+            if(profilePicture != nil){
+                self.profilePictureView.image = UIImage(data: profilePicture!)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
