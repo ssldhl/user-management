@@ -99,11 +99,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="RSG-ww-aFG">
-                                        <rect key="frame" x="15" y="250" width="280" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dih-f9-vCk">
                                         <rect key="frame" x="151" y="39" width="144" height="30"/>
                                         <state key="normal" title="Select Profile Picture"/>
@@ -119,6 +114,9 @@
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="signUp:" destination="WST-hp-PfQ" eventType="touchUpInside" id="yev-ry-QBH"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="s6m-Wu-Oep">
                                         <rect key="frame" x="15" y="172" width="280" height="30"/>
@@ -132,6 +130,11 @@
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="JaB-Jy-VhS">
                                         <rect key="frame" x="15" y="212" width="280" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="RSG-ww-aFG">
+                                        <rect key="frame" x="15" y="250" width="280" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -182,7 +185,12 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="700"/>
                     <connections>
-                        <outlet property="profilePicture" destination="sxe-Qx-tsg" id="MkC-aA-9p1"/>
+                        <outlet property="confirmPasswordField" destination="s6m-Wu-Oep" id="141-i6-BPU"/>
+                        <outlet property="emailAddressField" destination="kcZ-Pq-Nv3" id="SsI-CF-byc"/>
+                        <outlet property="firstNameField" destination="JaB-Jy-VhS" id="P1Q-cD-Ucq"/>
+                        <outlet property="lastNameField" destination="RSG-ww-aFG" id="n6F-Kv-Bc4"/>
+                        <outlet property="passwordField" destination="Ch5-Id-9v8" id="F2W-r2-ORf"/>
+                        <outlet property="profilePictureView" destination="sxe-Qx-tsg" id="ynb-Kw-ysH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z74-Da-PA0" userLabel="First Responder" sceneMemberID="firstResponder"/>
