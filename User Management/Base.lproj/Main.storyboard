@@ -71,7 +71,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="ygn-ik-nuq"/>
+                    <navigationItem key="navigationItem" title="Home" id="ygn-ik-nuq">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="enK-SZ-Oh1">
+                            <connections>
+                                <action selector="menu:" destination="Mi7-OW-c68" id="UjJ-xH-YTd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="Options" id="WI0-xX-Jq1">
+                            <connections>
+                                <action selector="options:" destination="Mi7-OW-c68" id="gt3-TZ-LfP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOS-if-4kA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -412,4 +423,8 @@
             <point key="canvasLocation" x="573" y="332"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Menu" width="25" height="25"/>
+        <image name="Options" width="25" height="25"/>
+    </resources>
 </document>
