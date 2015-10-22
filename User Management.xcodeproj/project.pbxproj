@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		353F73771BD8ECF400902E0C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F73761BD8ECF400902E0C /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		353F73831BD903B500902E0C /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 353F737B1BD903B500902E0C /* MMDrawerBarButtonItem.m */; settings = {ASSET_TAGS = (); }; };
+		353F73841BD903B500902E0C /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353F737D1BD903B500902E0C /* MMDrawerController.m */; settings = {ASSET_TAGS = (); }; };
+		353F73851BD903B500902E0C /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 353F73801BD903B500902E0C /* MMDrawerVisualState.m */; settings = {ASSET_TAGS = (); }; };
+		353F73861BD903B500902E0C /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353F73821BD903B500902E0C /* UIViewController+MMDrawerController.m */; settings = {ASSET_TAGS = (); }; };
 		359A81C51BD7DE9C00137970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A81C41BD7DE9C00137970 /* AppDelegate.swift */; };
 		359A81C71BD7DE9C00137970 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A81C61BD7DE9C00137970 /* SignInViewController.swift */; };
 		359A81CA1BD7DE9C00137970 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 359A81C81BD7DE9C00137970 /* Main.storyboard */; };
@@ -52,6 +56,16 @@
 
 /* Begin PBXFileReference section */
 		353F73761BD8ECF400902E0C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		353F73791BD903B500902E0C /* User Management-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User Management-Bridging-Header.h"; sourceTree = "<group>"; };
+		353F737A1BD903B500902E0C /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		353F737B1BD903B500902E0C /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		353F737C1BD903B500902E0C /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		353F737D1BD903B500902E0C /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		353F737E1BD903B500902E0C /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		353F737F1BD903B500902E0C /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		353F73801BD903B500902E0C /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		353F73811BD903B500902E0C /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		353F73821BD903B500902E0C /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		359A81C11BD7DE9C00137970 /* User Management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "User Management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		359A81C41BD7DE9C00137970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		359A81C61BD7DE9C00137970 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +136,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		353F73781BD9037A00902E0C /* MMDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				353F737A1BD903B500902E0C /* MMDrawerBarButtonItem.h */,
+				353F737B1BD903B500902E0C /* MMDrawerBarButtonItem.m */,
+				353F737C1BD903B500902E0C /* MMDrawerController.h */,
+				353F737D1BD903B500902E0C /* MMDrawerController.m */,
+				353F737E1BD903B500902E0C /* MMDrawerController+Subclass.h */,
+				353F737F1BD903B500902E0C /* MMDrawerVisualState.h */,
+				353F73801BD903B500902E0C /* MMDrawerVisualState.m */,
+				353F73811BD903B500902E0C /* UIViewController+MMDrawerController.h */,
+				353F73821BD903B500902E0C /* UIViewController+MMDrawerController.m */,
+			);
+			name = MMDrawer;
+			sourceTree = "<group>";
+		};
 		359A81B81BD7DE9C00137970 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +176,7 @@
 		359A81C31BD7DE9C00137970 /* User Management */ = {
 			isa = PBXGroup;
 			children = (
+				353F73781BD9037A00902E0C /* MMDrawer */,
 				359A81C41BD7DE9C00137970 /* AppDelegate.swift */,
 				359A81C61BD7DE9C00137970 /* SignInViewController.swift */,
 				359A81C81BD7DE9C00137970 /* Main.storyboard */,
@@ -155,6 +186,7 @@
 				359A81F81BD7E2E700137970 /* keys.plist */,
 				359A82171BD8093000137970 /* SignUpViewController.swift */,
 				353F73761BD8ECF400902E0C /* HomeViewController.swift */,
+				353F73791BD903B500902E0C /* User Management-Bridging-Header.h */,
 			);
 			path = "User Management";
 			sourceTree = "<group>";
@@ -260,6 +292,7 @@
 		359A81B91BD7DE9C00137970 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Sushil Dahal";
 				TargetAttributes = {
@@ -331,8 +364,12 @@
 			files = (
 				359A82181BD8093000137970 /* SignUpViewController.swift in Sources */,
 				359A81C71BD7DE9C00137970 /* SignInViewController.swift in Sources */,
+				353F73831BD903B500902E0C /* MMDrawerBarButtonItem.m in Sources */,
+				353F73861BD903B500902E0C /* UIViewController+MMDrawerController.m in Sources */,
 				359A81C51BD7DE9C00137970 /* AppDelegate.swift in Sources */,
+				353F73841BD903B500902E0C /* MMDrawerController.m in Sources */,
 				353F73771BD8ECF400902E0C /* HomeViewController.swift in Sources */,
+				353F73851BD903B500902E0C /* MMDrawerVisualState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +509,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -480,6 +518,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sushilthe.User-Management";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "User Management/User Management-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -487,6 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -495,6 +536,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sushilthe.User-Management";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "User Management/User Management-Bridging-Header.h";
 			};
 			name = Release;
 		};
