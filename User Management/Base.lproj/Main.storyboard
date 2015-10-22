@@ -172,7 +172,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sign Up" id="FMe-rl-18X">
-                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="xZI-QC-OL7"/>
+                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="xZI-QC-OL7">
+                            <connections>
+                                <action selector="cancel:" destination="WST-hp-PfQ" id="Vre-uU-F9d"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

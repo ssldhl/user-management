@@ -28,7 +28,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         // Dispose of any resources that can be recreated.
     }
     
-    
     @IBAction func selectProfilePicture(sender: UIButton) {
         let pictureSelector = UIImagePickerController()
         pictureSelector.delegate = self
@@ -40,4 +39,9 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         profilePicture.image = image
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
