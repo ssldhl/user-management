@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -50,29 +51,57 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func signUp(sender: UIButton) {
+        let user:PFUser = PFUser()
         let emailAddress = emailAddressField.text
         let password = passwordField.text
         let confirmPassword = confirmPasswordField.text
         let firstName = firstNameField.text
         let lastName = lastNameField.text
+        var valid:Bool = true
         
         
         if(emailAddress?.isEmpty ?? true || password?.isEmpty ?? true || confirmPassword?.isEmpty ?? true || firstName?.isEmpty ?? true || lastName?.isEmpty ?? true){
-            
             validationAlert("All Fields are required")
-            return
-        }
-        
-        if(password != confirmPassword){
+            valid = false
+        }else if(password != confirmPassword){
             validationAlert("Passwords do not match")
-            return
+            valid = false
+        }else{
+            user.username = emailAddress
+            user.password = password
+            user.email = emailAddress
+            user.setObject(firstName!, forKey: "first_name")
+            user.setObject(lastName!, forKey: "last_name")
+            
+            if(profilePictureView.image != nil){
+                let profilePicture = UIImageJPEGRepresentation(profilePictureView.image!, 1)
+                if(profilePicture != nil){
+                    let profilePictureFile = PFFile(data: profilePicture!)
+                    user.setObject(profilePictureFile!, forKey: "profile_picture")
+                }
+            }
         }
         
-        if(profilePictureView != nil){
-            let profilePicture = UIImageJPEGRepresentation(profilePictureView.image!, 1)
-            if(profilePicture != nil){
-                // TODO: Create PFFile Object and send to parse
-            }
+        if(valid){
+            user.signUpInBackgroundWithBlock({ (success:Bool, error:NSError?) -> Void in
+                var message = "Registration Successful"
+                if(!success){
+                    message = error!.localizedDescription
+                }
+                let validationAlert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+                
+                let alertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){ action in
+                    if(success){
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    }
+                }
+                
+                validationAlert.addAction(alertAction)
+                
+                self.presentViewController(validationAlert, animated: true, completion: nil)
+            })
+        }else{
+            return
         }
     }
     
