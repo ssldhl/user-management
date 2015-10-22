@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350671F61BD9295A003FEB2B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350671F51BD9295A003FEB2B /* MenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		350671F81BD92DFE003FEB2B /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350671F71BD92DFE003FEB2B /* OptionsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		353F73771BD8ECF400902E0C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F73761BD8ECF400902E0C /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		353F73831BD903B500902E0C /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 353F737B1BD903B500902E0C /* MMDrawerBarButtonItem.m */; settings = {ASSET_TAGS = (); }; };
 		353F73841BD903B500902E0C /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353F737D1BD903B500902E0C /* MMDrawerController.m */; settings = {ASSET_TAGS = (); }; };
@@ -55,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		350671F51BD9295A003FEB2B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		350671F71BD92DFE003FEB2B /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		353F73761BD8ECF400902E0C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		353F73791BD903B500902E0C /* User Management-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User Management-Bridging-Header.h"; sourceTree = "<group>"; };
 		353F737A1BD903B500902E0C /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 				359A82171BD8093000137970 /* SignUpViewController.swift */,
 				353F73761BD8ECF400902E0C /* HomeViewController.swift */,
 				353F73791BD903B500902E0C /* User Management-Bridging-Header.h */,
+				350671F51BD9295A003FEB2B /* MenuViewController.swift */,
+				350671F71BD92DFE003FEB2B /* OptionsViewController.swift */,
 			);
 			path = "User Management";
 			sourceTree = "<group>";
@@ -366,10 +372,12 @@
 				359A81C71BD7DE9C00137970 /* SignInViewController.swift in Sources */,
 				353F73831BD903B500902E0C /* MMDrawerBarButtonItem.m in Sources */,
 				353F73861BD903B500902E0C /* UIViewController+MMDrawerController.m in Sources */,
+				350671F61BD9295A003FEB2B /* MenuViewController.swift in Sources */,
 				359A81C51BD7DE9C00137970 /* AppDelegate.swift in Sources */,
 				353F73841BD903B500902E0C /* MMDrawerController.m in Sources */,
 				353F73771BD8ECF400902E0C /* HomeViewController.swift in Sources */,
 				353F73851BD903B500902E0C /* MMDrawerVisualState.m in Sources */,
+				350671F81BD92DFE003FEB2B /* OptionsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

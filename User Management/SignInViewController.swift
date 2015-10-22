@@ -39,11 +39,8 @@ class SignInViewController: UIViewController {
                 NSUserDefaults.standardUserDefaults().setObject(userName, forKey: "user_name")
                 NSUserDefaults.standardUserDefaults().synchronize()
                 
-                let storyBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let home:HomeViewController = storyBoard.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
-                let homeNavigation = UINavigationController(rootViewController: home)
                 let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-                appDelegate.window?.rootViewController = homeNavigation
+                appDelegate.buildUI()
             }else{
                 let message = error!.localizedDescription
                 let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.Alert)

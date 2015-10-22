@@ -14,6 +14,7 @@ import Bolts
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var drawerContainer: MMDrawerController?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -41,16 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
-        
-        let username = NSUserDefaults.standardUserDefaults().stringForKey("user_name")
-        
-        if(username != nil){
-            let storyBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let home:HomeViewController = storyBoard.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
-            let homeNavigation = UINavigationController(rootViewController: home)
-            let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            appDelegate.window?.rootViewController = homeNavigation
-        }
+        buildUI()
         
         return true
     }
@@ -77,6 +69,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func buildUI(){
+        let username = NSUserDefaults.standardUserDefaults().stringForKey("user_name")
+        
+        if(username != nil){
+            let storyBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let home:HomeViewController = storyBoard.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
+            let menu: MenuViewController = storyBoard.instantiateViewControllerWithIdentifier("MenuViewController") as! MenuViewController
+            let options: OptionsViewController = storyBoard.instantiateViewControllerWithIdentifier("OptionsViewController") as! OptionsViewController
+            
+            let homeNavigation = UINavigationController(rootViewController: home)
+            let menuNavigation = UINavigationController(rootViewController: menu)
+            let optionsNavigation = UINavigationController(rootViewController: options)
+            
+            drawerContainer = MMDrawerController(centerViewController: homeNavigation, leftDrawerViewController: menuNavigation, rightDrawerViewController: optionsNavigation)
+            drawerContainer?.openDrawerGestureModeMask = MMOpenDrawerGestureMode.PanningCenterView
+            drawerContainer?.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.PanningCenterView
+            
+            window?.rootViewController = drawerContainer
+        }
+    }
 
 }
 
