@@ -28,7 +28,7 @@ class ForgotPasswordViewController: UIViewController {
         let emailAddress = emailAddressField.text
         self.view.endEditing(true)
         
-        if(emailAddress?.isEmpty ?? true){
+        if(emailAddress!.isEmpty){
             displayAlert("Email Address is required", dismiss: false)
             return
         }

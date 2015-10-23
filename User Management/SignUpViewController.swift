@@ -62,7 +62,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.view.endEditing(true)
         
         
-        if(emailAddress?.isEmpty ?? true || password?.isEmpty ?? true || confirmPassword?.isEmpty ?? true || firstName?.isEmpty ?? true || lastName?.isEmpty ?? true){
+        if(emailAddress!.isEmpty || password!.isEmpty || confirmPassword!.isEmpty || firstName!.isEmpty || lastName!.isEmpty){
             validationAlert("All Fields are required")
             valid = false
         }else if(password != confirmPassword){

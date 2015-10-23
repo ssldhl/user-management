@@ -63,7 +63,7 @@ class UpdateUserViewController: UIViewController, UIImagePickerControllerDelegat
         var valid:Bool = true
         self.view.endEditing(true)
         
-        if(password != nil && password != ""){
+        if(!password!.isEmpty){
             if(confirmPassword == nil || password != confirmPassword){
                 displayAlert("Password do not match", dismiss: false)
                 valid = false
@@ -73,7 +73,7 @@ class UpdateUserViewController: UIViewController, UIImagePickerControllerDelegat
         }
         
         if(valid){
-            if(firstName?.isEmpty ?? true || lastName?.isEmpty ?? true){
+            if(firstName!.isEmpty || lastName!.isEmpty){
                 displayAlert("First Name or Last Name cannot be empty", dismiss: false)
                 valid = false
             }else{

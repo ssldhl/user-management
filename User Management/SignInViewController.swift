@@ -30,7 +30,7 @@ class SignInViewController: UIViewController {
         
         self.view.endEditing(true)
         
-        if(emailAddress?.isEmpty ?? true || password?.isEmpty ?? true){
+        if(emailAddress!.isEmpty || password!.isEmpty){
             print("Empty Fields")
             return
         }
