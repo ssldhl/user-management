@@ -28,12 +28,27 @@ class SignInViewController: UIViewController {
         let emailAddress = emailAddressField.text
         let password = passwordField.text
         
+        self.view.endEditing(true)
+        
         if(emailAddress?.isEmpty ?? true || password?.isEmpty ?? true){
             print("Empty Fields")
             return
         }
         
+        let spinner = MBProgressHUD.showHUDAddedTo(self.view, animated:true)
+        spinner.labelText = "Please Wait"
+        
+//        let spinner: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50)) as UIActivityIndicatorView
+//        spinner.center = self.view.center
+//        spinner.hidesWhenStopped = true
+//        spinner.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+//        self.view.addSubview(spinner)
+//        spinner.startAnimating()
+        
         PFUser.logInWithUsernameInBackground(emailAddress!, password: password!) { (user:PFUser?, error:NSError?) -> Void in
+            MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+//            spinner.stopAnimating()
+            
             if(user != nil){
                 let userName = user?.username
                 NSUserDefaults.standardUserDefaults().setObject(userName, forKey: "user_name")

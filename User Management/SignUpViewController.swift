@@ -59,6 +59,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         let lastName = lastNameField.text
         var valid:Bool = true
         
+        self.view.endEditing(true)
+        
         
         if(emailAddress?.isEmpty ?? true || password?.isEmpty ?? true || confirmPassword?.isEmpty ?? true || firstName?.isEmpty ?? true || lastName?.isEmpty ?? true){
             validationAlert("All Fields are required")
@@ -83,7 +85,12 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         
         if(valid){
+            let spinner = MBProgressHUD.showHUDAddedTo(self.view, animated:true)
+            spinner.labelText = "Please Wait"
+            
             user.signUpInBackgroundWithBlock({ (success:Bool, error:NSError?) -> Void in
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+                
                 var message = "Registration Successful"
                 if(!success){
                     message = error!.localizedDescription

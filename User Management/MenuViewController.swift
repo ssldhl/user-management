@@ -72,7 +72,11 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             NSUserDefaults.standardUserDefaults().removeObjectForKey("user_name")
             NSUserDefaults.standardUserDefaults().synchronize()
             
+            let spinner = MBProgressHUD.showHUDAddedTo(self.view, animated:true)
+            spinner.labelText = "Please Wait"
+            
             PFUser.logOutInBackgroundWithBlock({ (error:NSError?) -> Void in
+                MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
                 if(error == nil){
                     let signIn: SignInViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SignInViewController") as! SignInViewController
                     let signInNavigation = UINavigationController(rootViewController: signIn)

@@ -10,6 +10,7 @@
 		350671F61BD9295A003FEB2B /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350671F51BD9295A003FEB2B /* MenuViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		350671F81BD92DFE003FEB2B /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350671F71BD92DFE003FEB2B /* OptionsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		350671FA1BD9431D003FEB2B /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350671F91BD9431D003FEB2B /* AboutViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		3532C3321BD9E34C00C72B1B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3532C3311BD9E34C00C72B1B /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
 		353F73771BD8ECF400902E0C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353F73761BD8ECF400902E0C /* HomeViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		353F73831BD903B500902E0C /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 353F737B1BD903B500902E0C /* MMDrawerBarButtonItem.m */; settings = {ASSET_TAGS = (); }; };
 		353F73841BD903B500902E0C /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 353F737D1BD903B500902E0C /* MMDrawerController.m */; settings = {ASSET_TAGS = (); }; };
@@ -61,6 +62,8 @@
 		350671F51BD9295A003FEB2B /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		350671F71BD92DFE003FEB2B /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 		350671F91BD9431D003FEB2B /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		3532C3301BD9E34C00C72B1B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		3532C3311BD9E34C00C72B1B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		353F73761BD8ECF400902E0C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		353F73791BD903B500902E0C /* User Management-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User Management-Bridging-Header.h"; sourceTree = "<group>"; };
 		353F737A1BD903B500902E0C /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
@@ -142,6 +145,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3532C32F1BD9E30500C72B1B /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				3532C3301BD9E34C00C72B1B /* MBProgressHUD.h */,
+				3532C3311BD9E34C00C72B1B /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		353F73781BD9037A00902E0C /* MMDrawer */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +194,7 @@
 		359A81C31BD7DE9C00137970 /* User Management */ = {
 			isa = PBXGroup;
 			children = (
+				3532C32F1BD9E30500C72B1B /* MBProgressHUD */,
 				353F73781BD9037A00902E0C /* MMDrawer */,
 				359A81C41BD7DE9C00137970 /* AppDelegate.swift */,
 				359A81C61BD7DE9C00137970 /* SignInViewController.swift */,
@@ -378,6 +391,7 @@
 				353F73861BD903B500902E0C /* UIViewController+MMDrawerController.m in Sources */,
 				350671F61BD9295A003FEB2B /* MenuViewController.swift in Sources */,
 				359A81C51BD7DE9C00137970 /* AppDelegate.swift in Sources */,
+				3532C3321BD9E34C00C72B1B /* MBProgressHUD.m in Sources */,
 				353F73841BD903B500902E0C /* MMDrawerController.m in Sources */,
 				353F73771BD8ECF400902E0C /* HomeViewController.swift in Sources */,
 				353F73851BD903B500902E0C /* MMDrawerVisualState.m in Sources */,
