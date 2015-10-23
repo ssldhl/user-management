@@ -20,17 +20,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        let firstName: String = PFUser.currentUser()?.objectForKey("first_name") as! String
-        let lastName: String = PFUser.currentUser()?.objectForKey("last_name") as! String
-        nameField.text = "\(firstName) \(lastName)"
-        
-        let profilePictureData: PFFile = PFUser.currentUser()?.objectForKey("profile_picture") as! PFFile
-        profilePictureData.getDataInBackgroundWithBlock { (profilePicture:NSData?, error:NSError?) -> Void in
-            if(profilePicture != nil){
-                self.profilePictureView.image = UIImage(data: profilePicture!)
-            }
-        }
+        loadUserDefaults()
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,4 +82,23 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
 
+    @IBAction func edit(sender: UIButton) {
+        let updateProfile: UpdateUserViewController = self.storyboard?.instantiateViewControllerWithIdentifier("UpdateUserViewController") as! UpdateUserViewController
+        updateProfile.menu = self
+        let updateProfileNavigation = UINavigationController(rootViewController: updateProfile)
+        self.presentViewController(updateProfileNavigation, animated: true, completion: nil)
+    }
+    
+    func loadUserDefaults(){
+        let firstName: String = PFUser.currentUser()?.objectForKey("first_name") as! String
+        let lastName: String = PFUser.currentUser()?.objectForKey("last_name") as! String
+        nameField.text = "\(firstName) \(lastName)"
+        
+        let profilePictureData: PFFile = PFUser.currentUser()?.objectForKey("profile_picture") as! PFFile
+        profilePictureData.getDataInBackgroundWithBlock { (profilePicture:NSData?, error:NSError?) -> Void in
+            if(profilePicture != nil){
+                self.profilePictureView.image = UIImage(data: profilePicture!)
+            }
+        }
+    }
 }

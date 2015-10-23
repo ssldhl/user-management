@@ -107,10 +107,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
                 
                 self.presentViewController(validationAlert, animated: true, completion: nil)
             })
-        }else{
-            return
-        }
-    }
+        }    }
     
     func validationAlert(message: String){
         let validationAlert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.Alert)
