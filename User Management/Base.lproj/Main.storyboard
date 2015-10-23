@@ -339,14 +339,24 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="send:" destination="HFG-Rr-FDp" eventType="touchUpInside" id="YfQ-6R-Vz5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Forgot Password" id="SGB-tN-fY0">
-                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="wsk-Sj-ESS"/>
+                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="wsk-Sj-ESS">
+                            <connections>
+                                <action selector="cancel:" destination="HFG-Rr-FDp" id="c9C-Mj-E2d"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="emailAddressField" destination="1E9-fC-3wL" id="dDY-9m-aNM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Oy-BB-TMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
